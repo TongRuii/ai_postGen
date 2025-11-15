@@ -32,7 +32,7 @@ ai_PostGen_claude/
 
 - `docs/03_系统架构/系统架构设计总结.md` - 企业架构概览（40 页）
   - 完整的系统图和数据流
-  - 技术栈选择理由（React 18、Node.js、PostgreSQL、Kubernetes）
+  - 技术栈选择理由（Vue 3、FastAPI、PostgreSQL、Kubernetes）
 
 ### 2. **技术架构文档**（深入探讨）
 - `docs/03_系统架构/后端系统架构设计.md` - 后端设计（80 页）
@@ -41,7 +41,7 @@ ai_PostGen_claude/
   - 认证/授权流程、API 契约
 
 - `docs/03_系统架构/前端系统架构设计.md` - 前端设计（70 页）
-  - React 18 组件架构和 Zustand 状态管理
+  - Vue 3 Composition API 架构和 Pinia 状态管理
   - 基于 Pixi.js 的编辑工作台设计
   - 性能优化和测试架构
 
@@ -184,7 +184,7 @@ ai_PostGen_claude/
 ## 重要设计决策
 
 1. **微服务而非单体架构**：支持 AI 生成、异步导出、媒体处理的独立扩展
-2. **使用 Zustand 管理状态**：相比 Redux 更轻量级；更便于实时协作
+2. **使用 Pinia 管理状态**：Vue 3 官方推荐，完美的 TypeScript 支持和自动代码补全
 3. **Pixi.js 编辑器**：硬件加速画布，实现流畅的海报设计交互
 4. **Kong API 网关**：为 7 个微服务提供集中式速率限制、认证、路由
 5. **PostgreSQL + Redis + RabbitMQ + Celery**：
